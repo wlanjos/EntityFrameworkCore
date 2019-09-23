@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Alura.Loja.Testes.ConsoleApp
 {
@@ -9,6 +10,7 @@ namespace Alura.Loja.Testes.ConsoleApp
         public string Categoria { get; internal set; }
         public double PrecoUnitario { get; internal set; }
         public string Unidade { get; internal set; }
+        public IList<PromocaoProduto> Promocoes { get; internal set; }
 
 
         public override string ToString()
