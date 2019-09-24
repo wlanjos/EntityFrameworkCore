@@ -15,13 +15,13 @@ namespace Alura.Loja.Testes.ConsoleApp
             this.contexto = new LojaContext();
         }
 
-        public void Adicionar(Promocao p)
+        public void Adicionar(Produto p)
         {
             contexto.Produtos.Add(p);
             contexto.SaveChanges();
         }
 
-        public void Atualizar(Promocao p)
+        public void Atualizar(Produto p)
         {
             contexto.Produtos.Update(p);
             contexto.SaveChanges();
@@ -32,12 +32,12 @@ namespace Alura.Loja.Testes.ConsoleApp
             contexto.Dispose();
         }
 
-        public IList<Promocao> Produtos()
+        public IList<Produto> Produtos()
         {
             return contexto.Produtos.ToList();
         }
 
-        public void Remover(Promocao p)
+        public void Remover(Produto p)
         {
             contexto.Produtos.Remove(p);
             contexto.SaveChanges();

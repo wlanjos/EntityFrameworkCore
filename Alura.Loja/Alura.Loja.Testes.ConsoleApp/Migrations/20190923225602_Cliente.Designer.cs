@@ -8,9 +8,10 @@ using Alura.Loja.Testes.ConsoleApp;
 namespace Alura.Loja.Testes.ConsoleApp.Migrations
 {
     [DbContext(typeof(LojaContext))]
-    partial class LojaContextModelSnapshot : ModelSnapshot
+    [Migration("20190923225602_Cliente")]
+    partial class Cliente
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2")
@@ -82,7 +83,7 @@ namespace Alura.Loja.Testes.ConsoleApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Produtos");
+                    b.ToTable("Produto");
                 });
 
             modelBuilder.Entity("Alura.Loja.Testes.ConsoleApp.Promocao", b =>
@@ -98,7 +99,7 @@ namespace Alura.Loja.Testes.ConsoleApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Promocoes");
+                    b.ToTable("Promocao");
                 });
 
             modelBuilder.Entity("Alura.Loja.Testes.ConsoleApp.PromocaoProduto", b =>
